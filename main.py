@@ -14,7 +14,7 @@ random_values = [[random.randint(-10, 10) for _ in range(4)] for _ in range(20)]
 universal_pairs = set()
 #Внешний цикл проходится по всем элементам списка
 for a in range(len(random_values)):
-    #Внутренний цикл перебирает элементы, которые идут после текущего элемента внешнего цикла
+    #Этот внутренний цикл перебирает индексы b, начиная с a + 1 до конца списка random_values
     for b in range(a + 1, len(random_values)):
         #Каждая пара подсписков добавляется в множество как кортеж для обеспечения уникальности
         universal_pairs.add((tuple(random_values[a]), tuple(random_values[b])))
@@ -39,3 +39,4 @@ for pair in universal_pairs:
 
 #Вывод результата
 print("Количество пар, чья сумма меньше", input_user, ":", count)
+
