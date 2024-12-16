@@ -17,7 +17,7 @@ universal_pairs = set()
 for a in range(len(random_values)):
     #Внутренний цикл перебирает индексы b, начиная с a + 1 до конца списка random_values
     for b in range(a + 1, len(random_values)):
-        #Каждая пара подсписков добавляется в множество как кортеж для обеспечения уникальности
+        #Каждая пара подсписков добавляется в множество как кортеж для обеспечения уникальности 
         universal_pairs.add((tuple(random_values[a]), tuple(random_values[b])))
 
 #Выводим все универсальные пары, которые были собраны в universal_pairs
